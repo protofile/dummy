@@ -245,6 +245,12 @@
             document.execCommand("copy");
             $temp.remove();
         }
+
+        $(document).ready(function(){
+            $(".group li button").click(function(){
+                $($(this).parent()).addClass("copied");
+            });
+        });
         
     </script>
 </body>

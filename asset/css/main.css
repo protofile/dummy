@@ -93,13 +93,17 @@ ul.group li{
     border-radius: 8px;
     height: 42px;
 }
+ul.group li.copied{
+    border-color: #29D02F;
+    background: #E1FDE2;
+}
 ul.group li p{
     margin-bottom: 0;
     font-size: 14px;
     width: 100%;
     white-space: nowrap;
-    text-overflow: hidden;
-    
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 ul.group li button{
     position: absolute;
@@ -107,7 +111,7 @@ ul.group li button{
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    background: #fff;
+    background: rgba(0,0,0,0.1);
     border-radius: 6px;
     width: 40px;
     height: 40px;
@@ -117,9 +121,9 @@ ul.group li button{
 ul.group li button:hover{
     color:#1a1a1a;
     cursor:pointer;
-    background: #f4f4f4;
+    background: rgba(0,0,0,0.05);
 }
 ul.group li button:focus{
     outline: none;
-    background: #dedede;
+    background: rgba(0,0,0,0.15);
 }
