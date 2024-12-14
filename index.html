@@ -175,6 +175,9 @@
       $(document).ready(function () {
         $(".group li button").click(function () {
           $($(this).parent()).addClass("copied");
+          setTimeout(function(){
+            $(".group li").removeClass("copied");
+          },3000);
         });
       });
     </script>

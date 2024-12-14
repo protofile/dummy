@@ -92,6 +92,11 @@ ul.group li{
     padding: 10px 60px 10px 20px;
     border-radius: 8px;
     height: 42px;
+    transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -ms-transition: all ease-out 0.3s;
+    -o-transition: all ease-out 0.3s;
 }
 ul.group li.copied{
     border-color: #29D02F;
@@ -113,10 +118,12 @@ ul.group li button{
     border: none;
     background: rgba(0,0,0,0.1);
     border-radius: 6px;
-    width: 40px;
+    width: 100%;
     height: 40px;
     color: #555;
     transition: all ease-out 0.3s;
+    z-index: 2;
+    opacity: 0;
 }
 ul.group li button:hover{
     color:#1a1a1a;
@@ -126,4 +133,21 @@ ul.group li button:hover{
 ul.group li button:focus{
     outline: none;
     background: rgba(0,0,0,0.15);
+}
+ul.group li::before{
+    content: "Copied";
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -ms-transition: all ease-out 0.3s;
+    -o-transition: all ease-out 0.3s;
+}
+ul.group li.copied::before{
+    opacity: 1;
 }
